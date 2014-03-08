@@ -105,7 +105,9 @@ return array(
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-		'Illuminate\Workbench\WorkbenchServiceProvider',
+    'Illuminate\Workbench\WorkbenchServiceProvider',
+    'Way\Generators\GeneratorsServiceProvider',
+    'Conarwelsh\MustacheL4\MustacheL4ServiceProvider',
 
 	),
 

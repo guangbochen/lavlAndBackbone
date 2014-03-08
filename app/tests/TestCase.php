@@ -2,6 +2,24 @@
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase {
 
+  /**
+   * setUp is called prior to each test
+   */
+  public function setUp()
+  {
+    parent::setUp();
+    $this->seed();
+  }
+   
+  /**
+   * tearDown is called after each test
+   * @return [type] [description]
+   */
+  public function tearDown()
+  {
+    Mockery::close();
+  }
+
 	/**
 	 * Creates the application.
 	 *
@@ -14,6 +32,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 		$testEnvironment = 'testing';
 
 		return require __DIR__.'/../../bootstrap/start.php';
-	}
+  }
 
 }
